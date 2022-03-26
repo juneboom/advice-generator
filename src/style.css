@@ -83,6 +83,11 @@ hr {
     background-color: var(--c-neon-green);
 }
 
+#button:hover {
+    box-shadow: 0px 0px 30px var(--c-neon-green);
+    cursor: pointer;
+}
+
 .attribution {
     font-size: 12px;
     text-align: center;
