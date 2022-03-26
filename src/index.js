@@ -4,8 +4,8 @@ const cardText = document.querySelector('.card-text');
 const printAdvice = async() => {
     let { slip } = await getData(adviceURL);
     cardText.innerHTML = `
-    <h1>Advice #${slip.id}</h1>
-    <p>${slip.advice}</p>
+    <h1>ADVICE #${slip.id}</h1>
+    <p>"${slip.advice}"</p>
     `
 };
 

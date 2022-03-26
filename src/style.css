@@ -1,0 +1,118 @@
+:root {
+    /* primary colors */
+    --c-light-cyan: hsl(193, 38%, 86%);
+    --c-neon-green: hsl(150, 100%, 66%);
+    /* neutral colors */
+    --c-gray-blue-1: hsl(217, 19%, 38%);
+    --c-gray-blue-2: hsl(217, 19%, 24%);
+    --c-gray-blue-3: hsl(218, 23%, 16%);
+}
+
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* global */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-gray-blue-3);
+    display: inline-block;
+}
+
+
+/* main */
+
+.card {
+    margin: 18vh 3vw 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--c-gray-blue-2);
+}
+
+.card-text {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 35px 0 20px 0;
+    letter-spacing: 0.3em;
+    color: var(--c-neon-green);
+}
+
+p {
+    font-size: 28px;
+    font-weight: 800;
+    padding: 15px;
+    padding-top: 0;
+    color: var(--c-light-cyan);
+}
+
+
+/* mobile horizontal divider */
+
+hr {
+    margin: auto;
+    padding: 10px 0 0 0;
+    height: 16px;
+    border: none;
+    content: url("../images/pattern-divider-mobile.svg");
+}
+
+#button {
+    position: relative;
+    top: 30px;
+    height: 4.5em;
+    width: 4.5em;
+    border-radius: 50%;
+    border-width: 0;
+    background-color: var(--c-neon-green);
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    color: var(--c-light-cyan);
+    width: 100%;
+    padding: 15px 0;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(325, 100%, 61%);
+}
+
+
+/* for devices at least 800px wide*/
+
+@media (min-width: 800px) and (-webkit-min-device-pixel-ratio: 1) {
+    .card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        min-width: 500px;
+    }
+    p {
+        padding: 15px 50px;
+    }
+    hr {
+        content: url("../images/pattern-divider-desktop.svg");
+    }
+}
